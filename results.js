@@ -1,4 +1,4 @@
-result = {
+const result = {
   connectedDomains: {
     1: "Ethereum",
     10: "Optimism",
