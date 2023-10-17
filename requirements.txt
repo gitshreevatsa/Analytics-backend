@@ -1,0 +1,9 @@
+1. Total interchain messages : Sorted per chain //Counters : totalMessagesManager.js : DONE 
+2. Successful relaying percentage : Need to figure out algorithm : DONE
+3. Total no. of active users : Sorted => Based on users //Aggregate(4+) : totalUsersManager.js : DONE
+4. Maybe a bar graph to show no. of active users by chain : Sorted => Based on users //uniqueUsers : totalUsersManager.js : DONE
+5. Bar graph to show most active chains : Sorted => Based on no. of messages //Counters(Average) : mostActiveChainsManager.js : DONE
+6. Small table to get the most latest interchain transactions : Sorted => Based on timestamp //dispatchedMessages : dispatchedMessagesManager.js : DONE
+7. Connected domains(chains) : Sorted => Constant Values //constants.js : constants.js : DONE
+8. Top domains from which the messages are coming from : Sorted => Based on no. of messages dispatched //chainPerformnce : mostActiveChainsManager.js : DONE
+9. Top domains messages are going to : Sorted => Based on no. of messages processed  //chainPerformnce : mostActiveChainsManager.js : DONE
