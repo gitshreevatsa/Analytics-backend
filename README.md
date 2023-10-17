@@ -1,8 +1,11 @@
 Endpoints :
 
-- GET : /
+- GET : ```/```
+
         Result : result.js
 
-- GET : /profile/:walletAddress
+
+- GET : ```/profile/:walletAddress```
+
+
         Result : profile.js
-        
