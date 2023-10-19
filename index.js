@@ -114,12 +114,15 @@ app.get('/', async(req,res) => {
     await totalInterChainMessagesPerChainManager();
   const chainPerformanceScore = await chainPerformanceManager();
   const connectedDomains = await connectedDomainManager();
-  res.send({
+  const result = {
     connectedDomains : connectedDomains,
     dispatches: dispatches,
     users: users,
     totalInterChainMessagesPerChain: totalInterChainMessagesPerChainResult,
-    chainPerformanceScore: chainPerformanceScore
+    ...chainPerformanceScore,
+  }
+  res.send({
+    result  
   })
 })
 
