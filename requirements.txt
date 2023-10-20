@@ -1,4 +1,4 @@
-1. Total interchain messages : Sorted per chain //Counters : totalMessagesManager.js : DONE 
+1. Total interchain messages : Sorted per chain //Counters : totalMessagesManager.js : DONE
 2. Successful relaying percentage : Need to figure out algorithm : DONE
 3. Total no. of active users : Sorted => Based on users //Aggregate(4+) : totalUsersManager.js : DONE
 4. Maybe a bar graph to show no. of active users by chain : Sorted => Based on users //uniqueUsers : totalUsersManager.js : DONE

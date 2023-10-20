@@ -122,7 +122,7 @@ app.get('/', async(req,res) => {
     ...chainPerformanceScore,
   }
   res.send({
-    result  
+    result
   })
 })
 
