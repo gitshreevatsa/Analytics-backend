@@ -21,3 +21,7 @@ Data Params :
 - most active chains : totalInterChainMessagesPerChain.mostActiveChains
 - latest interchain transactions : dispatches
 - Graph data : result.ethereum etc (see result.js)
+
+
+For profile route :
+- profileWithStale, profileWithoutStale : Either of the one is going to be in the result(It is as so because hyperlane uses 2 types of addressing so).
