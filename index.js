@@ -117,7 +117,7 @@ app.get('/', async(req,res) => {
   const result = {
     connectedDomains : connectedDomains,
     dispatches: dispatches,
-    users: users,
+    "users": users,
     totalInterChainMessagesPerChain: totalInterChainMessagesPerChainResult,
     ...chainPerformanceScore,
   }

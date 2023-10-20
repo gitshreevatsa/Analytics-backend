@@ -8,6 +8,7 @@ exports.connectedDomainManager = async () => {
     1: "Ethereum",
     100: "Gnosis",
     1284: "Moonbeam",
+    137: "Polygon",
   };
 
   return chainIDMapping;

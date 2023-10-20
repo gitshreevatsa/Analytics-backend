@@ -10,7 +10,9 @@ exports.graphURLs = () => {
     10: "https://api.thegraph.com/subgraphs/name/gitshreevatsa/hyperlane-subgraph-optimism",
     1: "https://api.thegraph.com/subgraphs/name/gitshreevatsa/hyperlane-subgraph-ethereum",
     100: "https://api.thegraph.com/subgraphs/name/gitshreevatsa/hyperlane-subgraph-gnosis",
+    137 : "https://api.thegraph.com/subgraphs/name/gitshreevatsa/hyperlane-subgraph-polygon",
     1284: "https://api.thegraph.com/subgraphs/name/gitshreevatsa/hyperlane-subgraph-moonbeam",
   };
+
   return constants;
 };
