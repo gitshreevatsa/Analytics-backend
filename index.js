@@ -36,36 +36,29 @@ app.get("/dispatch", async (req, res) => {
   });
 });
 
-app.get("/recieved", async (req, res) => {
-  console.log(req.query.chain);
-  const recieved = await getRecieved(req.query.chain);
-  const result = recieved.data.processes.map((recieved) => {
-    return {
-      id: recieved.id,
-      sender: recieved.sender,
-      origin: recieved.origin,
-      recipient: recieved.recipient,
-      blockNumber: recieved.blockNumber,
-      blockTimestamp: recieved.blockTimestamp,
-      transactionHash: recieved.transactionHash,
-    };
-  });
-  res.send({
-    length: result.length,
-    recieved: result,
-  });
-});
+// app.get("/recieved", async (req, res) => {
+//   console.log(req.query.chain);
+//   const recieved = await getRecieved(req.query.chain);
+//   const result = recieved.data.processes.map((recieved) => {
+//     return {
+//       id: recieved.id,
+//       sender: recieved.sender,
+//       origin: recieved.origin,
+//       recipient: recieved.recipient,
+//       blockNumber: recieved.blockNumber,
+//       blockTimestamp: recieved.blockTimestamp,
+//       transactionHash: recieved.transactionHash,
+//     };
+//   });
+//   res.send({
+//     length: result.length,
+//     recieved: result,
+//   });
+// });
 
 app.get("/uniqueUsers", async (req, res) => {
   console.log(req.query.chain);
   const users = await usersManager();
-  //   const result = users.data.users.map((user) => {
-  //     return {
-  //       id: user.id,
-  //       dispatchCounter: user.dispatchCounter,
-  //       processCounter: user.processCounter,
-  //     };
-  //   });
   res.send({
     total: users.total,
     data: users.perChainObj,
@@ -77,15 +70,6 @@ app.get("/totalInterChainMessagesPerChain", async (req, res) => {
   //   console.log(req.query.chain);
   const totalInterChainMessagesPerChainResult =
     await totalInterChainMessagesPerChainManager();
-  //   const result = totalInterChainMessagesPerChainResult.data.counters.map(
-  //     (remotechain) => {
-  //       return {
-  //         id: remotechain.id,
-  //         dispatchCounter: remotechain.dispatchCounter,
-  //         processCounter: remotechain.processCounter,
-  //       };
-  //     }
-  //   );
   res.send({
     totalInterChainMessagesPerChain: totalInterChainMessagesPerChainResult,
   });
@@ -94,13 +78,6 @@ app.get("/totalInterChainMessagesPerChain", async (req, res) => {
 app.get("/chainPerformance", async (req, res) => {
   const chainPerformanceScore = await chainPerformanceManager();
 
-  //   const result = chainPerformanceScore.data.remoteChains.map((remotechain) => {
-  //     return {
-  //       id: remotechain.id,
-  //       dispatchCounter: remotechain.dispatchCounter,
-  //       processCounter: remotechain.processCounter,
-  //     };
-  //   });
   res.send({
     chainPerformanceScore: chainPerformanceScore,
   });
@@ -116,10 +93,10 @@ app.get('/', async(req,res) => {
   const connectedDomains = await connectedDomainManager();
   const result = {
     connectedDomains : connectedDomains,
-    dispatches: dispatches,
-    "users": users,
-    totalInterChainMessagesPerChain: totalInterChainMessagesPerChainResult,
-    ...chainPerformanceScore,
+    // dispatches: dispatches,
+    // "users": users,
+    // totalInterChainMessagesPerChain: totalInterChainMessagesPerChainResult,
+    // ...chainPerformanceScore,
   }
   res.send({
     result
