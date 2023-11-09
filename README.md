@@ -39,9 +39,10 @@ For profile route :
                  - Total interchain messages : totalInterChainMessagesPerChain.sumDispatchCounter
                  - Successful relaying percentage : totalInterChainMessagesPerChain.relayPercentage
 
-- GET : ```/dispatches```
+- GET :  ```/dispatches```
 
         Result : - latest interchain transactions : dispatches
 
 - GET : ```/chainPerformance```
+  
         Result : - Graph data : result.ethereum etc
