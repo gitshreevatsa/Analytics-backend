@@ -1,17 +1,17 @@
 exports.graphURLs = () => {
   const constants = {
-    56: "https://api.thegraph.com/subgraphs/name/gitshreevatsa/hyperlane-subgraph-bsc",
+    56: "https://api.thegraph.com/subgraphs/name/gitshreevatsa/v3-hyperlane-v3",
     42161:
-      "https://api.thegraph.com/subgraphs/name/gitshreevatsa/hyperlane-subgraph-arbitrum",
+      "https://api.studio.thegraph.com/query/60520/v3-hyperlane-avalanche/version/latest",
     43114:
       "https://api.thegraph.com/subgraphs/name/gitshreevatsa/hyperlane-subgraph-avalanche",
     42220:
-      "https://api.thegraph.com/subgraphs/name/gitshreevatsa/hyperlane-subgraph-celo",
-    10: "https://api.thegraph.com/subgraphs/name/gitshreevatsa/hyperlane-subgraph-optimism",
-    1: "https://api.thegraph.com/subgraphs/name/gitshreevatsa/hyperlane-subgraph-ethereum",
-    100: "https://api.thegraph.com/subgraphs/name/gitshreevatsa/hyperlane-subgraph-gnosis",
-    137 : "https://api.thegraph.com/subgraphs/name/gitshreevatsa/hyperlane-subgraph-polygon",
-    1284: "https://api.thegraph.com/subgraphs/name/gitshreevatsa/hyperlane-subgraph-moonbeam",
+      "https://api.studio.thegraph.com/query/60520/v3-hyperlane-celo/version/latest",
+    10: "https://api.studio.thegraph.com/query/60520/v3-hyperlane-optimism/version/latest",
+    1: "https://api.studio.thegraph.com/query/60520/v3-hyperlane-mainet/version/latest",
+    100: "https://api.studio.thegraph.com/query/60520/v3-hyperlane-gnosis/version/latest",
+    137 : "https://api.studio.thegraph.com/query/60520/v3-hyperlane-subgraph/version/latest",
+    1284: "https://api.thegraph.com/subgraphs/name/gitshreevatsa/v3-hyperlane-moonbeam1",
   };
 
   return constants;
