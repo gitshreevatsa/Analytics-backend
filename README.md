@@ -44,5 +44,17 @@ For profile route :
         Result : - latest interchain transactions : dispatches
 
 - GET : ```/chainPerformance```
-  
+
         Result : - Graph data : result.ethereum etc
+
+- GET : ```/connectedDomains```
+
+        Result : - Connected domains(chains)  : connectedDomains
+
+- GET : ```/profile/:walletAddress```
+
+                Result : - profileWithStale, profileWithoutStale : Either of the one is going to be in the result(It is as so because hyperlane uses 2 types of addressing so).
+
+- GET : ```/relay```
+
+                Result : - relay : relay(check results.js for reference)

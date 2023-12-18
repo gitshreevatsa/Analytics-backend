@@ -19,6 +19,7 @@ const {
 const { chainPerformanceManager } = require("./managers/topDomainGraphManger");
 const { profileManager } = require("./managers/profileManager");
 const { connectedDomainManager } = require("./managers/connectedDomainManager");
+const { totalAverageRelayManager } = require("./managers/totalAverageRelay");
 
 const app = express();
 
@@ -86,12 +87,12 @@ app.get("/chainPerformance", async (req, res) => {
 
 app.get('/', async(req,res) => {
   // need to set to cache
-  const dispatches = await dispatchMessagesManager();
-  const users = await usersManager();
-  const totalInterChainMessagesPerChainResult =
-    await totalInterChainMessagesPerChainManager();
-  const chainPerformanceScore = await chainPerformanceManager();
-  const connectedDomains = await connectedDomainManager();
+  // const dispatches = await dispatchMessagesManager();
+  // const users = await usersManager();
+  // const totalInterChainMessagesPerChainResult =
+  //   await totalInterChainMessagesPerChainManager();
+  // const chainPerformanceScore = await chainPerformanceManager();
+  // const connectedDomains = await connectedDomainManager();
   const result = {
     connectedDomains : connectedDomains,
     // dispatches: dispatches,
@@ -101,6 +102,13 @@ app.get('/', async(req,res) => {
   }
   res.send({
     result
+  })
+})
+
+app.get("/relay", async(req,res) => {
+  const relayTime = await totalAverageRelayManager();
+  res.send({
+    relayTime: relayTime
   })
 })
 

@@ -21,12 +21,12 @@ exports.getDispatch = async (url) => {
   return data;
 };
 
-exports.getRecieved = async (chain) => {
+exports.getRecieved = async (url) => {
   const client = createClient({
-    url: graphURLs()[chain],
+    url: url,
     exchanges: [cacheExchange, fetchExchange],
   });
-  console.log(graphURLs()[chain]);
+  console.log(url);
   console.log(client);
   const data = await client.query(processQuery).toPromise();
   console.log(data);
