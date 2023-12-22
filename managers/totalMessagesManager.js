@@ -27,26 +27,34 @@ const totalInterChainMessagesPerChainManager = async () => {
 
     totalInterChainMessagesPerChainResult.forEach((chain) => {
       chain.result.forEach((result) => {
-        console.log(result.dispatchCounter);
+        // console.log(result.dispatchCounter);
         sumDispatchCounter += parseInt(result.dispatchCounter);
       });
     });
 
     totalInterChainMessagesPerChainResult.forEach((chain) => {
       chain.result.forEach((result) => {
-        console.log(result.processCounter);
+        // console.log(result.processCounter);
         sumProcessCounter += parseInt(result.processCounter);
       });
     });
 
+    console.log(
+      totalInterChainMessagesPerChainResult[0].result[0].dispatchCounter
+    );
+
     totalInterChainMessagesPerChainResult.forEach((entry) => {
       const chainId = entry.chainId;
-      const { dispatchCounter, processCounter } = entry.result[0];
+      const { dispatchCounter, processCounter } = entry.result[0] || {
+        dispatchCounter: 0,
+        processCounter: 0,
+      };
 
       parsedData[chainId] = {
         dispatchCounter: dispatchCounter,
         processCounter: processCounter,
       };
+      console.log(parsedData);
     });
 
     for (const key in parsedData) {
