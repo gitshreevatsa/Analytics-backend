@@ -25,7 +25,7 @@ exports.chainPerformanceManager = async () => {
       42220: "celo",
       100: "gnosis",
       1284: "moonbeam",
-      1101: "Polygon ZKEVM",
+      1101: "Polygon_ZKEVM",
       534352: "Scroll",
       8453: "Base"
     };
