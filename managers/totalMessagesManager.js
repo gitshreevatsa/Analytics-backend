@@ -73,8 +73,12 @@ const totalInterChainMessagesPerChainManager = async () => {
     // Sort the chains in descending order of the calculated average
     averages.sort((a, b) => b.average - a.average);
 
-    const relayPercentage =
-      parseFloat(sumProcessCounter / sumDispatchCounter) * 100;
+    let relayPercentage;
+
+    relayPercentage = parseFloat(sumProcessCounter / sumDispatchCounter) * 100;
+    if (relayPercentage > 100) {
+      relayPercentage = (1 / relayPercentage) * 10000;
+    }
 
     return {
       sumDispatchCounter,
