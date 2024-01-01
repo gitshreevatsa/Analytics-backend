@@ -12,6 +12,9 @@ exports.graphURLs = () => {
     100: "https://api.studio.thegraph.com/query/60520/v3-hyperlane-gnosis/version/latest",
     137 : "https://api.studio.thegraph.com/query/60520/v3-hyperlane-subgraph/version/latest",
     1284: "https://api.thegraph.com/subgraphs/name/gitshreevatsa/v3-hyperlane-moonbeam1",
+    1101 : "https://api.studio.thegraph.com/query/60520/v3-hyperlane-zkevm/version/latest",
+    534352:"https://api.studio.thegraph.com/query/60520/v3-hyperlane-scroll/version/latest",
+    8453 : "https://api.studio.thegraph.com/query/60520/v3-hyperlane-base/version/latest"
   };
 
   return constants;
