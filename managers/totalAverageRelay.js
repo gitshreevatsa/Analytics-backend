@@ -34,6 +34,9 @@ exports.totalAverageRelayManager = async () => {
         arbitrum: 40,
         avalanche: 30,
         celo: 46,
+        polygonZkevm: 23,
+        scroll: 78,
+        base: 56
       },
       optimism: {
         ethereum: 28,
@@ -44,6 +47,9 @@ exports.totalAverageRelayManager = async () => {
         arbitrum: 40,
         avalanche: 30,
         celo: 46,
+        polygonZkevm: 23,
+        scroll: 78,
+        base: 56
       },
       binance: {
         ethereum: 28,
@@ -54,6 +60,9 @@ exports.totalAverageRelayManager = async () => {
         arbitrum: 40,
         avalanche: 30,
         celo: 46,
+        polygonZkevm: 23,
+        scroll: 78,
+        base: 56
       },
       gnosis: {
         ethereum: 28,
@@ -64,6 +73,9 @@ exports.totalAverageRelayManager = async () => {
         arbitrum: 40,
         avalanche: 30,
         celo: 46,
+        polygonZkevm: 23,
+        scroll: 78,
+        base: 56
       },
       polygon: {
         ethereum: 28,
@@ -74,6 +86,9 @@ exports.totalAverageRelayManager = async () => {
         arbitrum: 40,
         avalanche: 30,
         celo: 46,
+        polygonZkevm: 23,
+        scroll: 78,
+        base: 56
       },
       moonbeam: {
         ethereum: 28,
@@ -84,6 +99,9 @@ exports.totalAverageRelayManager = async () => {
         arbitrum: 40,
         avalanche: 30,
         celo: 46,
+        polygonZkevm: 23,
+        scroll: 78,
+        base: 56
       },
       arbitrum: {
         ethereum: 28,
@@ -94,6 +112,9 @@ exports.totalAverageRelayManager = async () => {
         moonbeam: 40,
         avalanche: 30,
         celo: 46,
+        polygonZkevm: 23,
+        scroll: 78,
+        base: 56
       },
       avalanche: {
         ethereum: 28,
@@ -104,6 +125,9 @@ exports.totalAverageRelayManager = async () => {
         moonbeam: 40,
         arbitrum: 30,
         celo: 46,
+        polygonZkevm: 23,
+        scroll: 78,
+        base: 56
       },
       celo: {
         ethereum: 28,
@@ -114,7 +138,51 @@ exports.totalAverageRelayManager = async () => {
         moonbeam: 40,
         arbitrum: 30,
         avalanche: 46,
+        polygonZkevm: 23,
+        scroll: 78,
+        base: 56
       },
+      polygonZkevm: {
+        ethereum: 28,
+        optimism: 48,
+        binance: 32,
+        gnosis: 26,
+        polygon: 30,
+        moonbeam: 40,
+        arbitrum: 30,
+        avalanche: 46,
+        celo: 23,
+        scroll: 78,
+        base: 56
+      },
+      scroll: {
+        ethereum: 28,
+        optimism: 48,
+        binance: 32,
+        gnosis: 26,
+        polygon: 30,
+        moonbeam: 40,
+        arbitrum: 30,
+        avalanche: 46,
+        polygonZkevm: 23,
+        celo: 78,
+        base: 56
+      },
+      base: {
+        ethereum: 28,
+        optimism: 48,
+        binance: 32,
+        gnosis: 26,
+        polygon: 30,
+        moonbeam: 40,
+        arbitrum: 30,
+        avalanche: 46,
+        polygonZkevm: 23,
+        scroll: 78,
+        celo: 56
+      }
+
+
     };
     // Get messageId from the latest transaction on dispatch and check for that message id in recieved and do this for all the chains
     // after that calculate average relay time from blocktimestamp of dispatch and recieved
